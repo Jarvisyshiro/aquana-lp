@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aquana</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="#" class="header__logo">
+        <img src="assets/logo.png" alt="Aquana" width="160" height="48">
+      </a>
+
+      <button class="header__hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="header__nav" id="nav">
+        <a href="#system" class="header__link">System</a>
+        <span class="header__separator">|</span>
+        <a href="#about-us" class="header__link">About us</a>
+        <span class="header__separator">|</span>
+        <a href="#" class="header__link" id="inquiry-link">Inquiry</a>
+        <a href="#" class="header__login">
+          <svg class="header__login-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+          Member Login
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <h1 class="hero__title">Coming Soon 2026</h1>
+      <div class="hero__divider">
+        <span class="hero__divider-line"></span>
+        <svg class="hero__droplet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 32" width="14" height="18" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 2C12 2 4 14 4 20a8 8 0 0 0 16 0c0-6-8-18-8-18z"/>
+        </svg>
+        <span class="hero__divider-line"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cards Section -->
+  <section class="cards">
+    <div class="cards__inner">
+      <a href="#system" class="card scroll-reveal" id="system">
+        <div class="card__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <circle cx="12" cy="10" r="3"/>
+            <path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"/>
+            <path d="M12 2v2"/>
+            <path d="M12 20v2"/>
+            <path d="M2 12h2"/>
+            <path d="M20 12h2"/>
+          </svg>
+        </div>
+        <h2 class="card__title">System</h2>
+      </a>
+
+      <a href="#about-us" class="card scroll-reveal" id="about-us">
+        <div class="card__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <h2 class="card__title">About us</h2>
+      </a>
+    </div>
+  </section>
+
+  <!-- Inquiry Popup -->
+  <div class="inquiry-overlay" id="inquiry-overlay"></div>
+  <aside class="inquiry-popup" id="inquiry-popup" aria-hidden="true">
+    <div class="inquiry-popup__header">
+      <div class="inquiry-popup__title-group">
+        <div class="inquiry-popup__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="20" height="16" x="2" y="4" rx="2"/>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+          </svg>
+        </div>
+        <h3 class="inquiry-popup__title">Inquiry Page</h3>
+      </div>
+      <button class="inquiry-popup__close" id="inquiry-close" aria-label="閉じる">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 6 6 18"/>
+          <path d="m6 6 12 12"/>
+        </svg>
+      </button>
+    </div>
+    <div class="inquiry-popup__divider">
+      <span class="inquiry-popup__divider-line"></span>
+      <svg class="inquiry-popup__droplet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 32" width="10" height="14" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M12 2C12 2 4 14 4 20a8 8 0 0 0 16 0c0-6-8-18-8-18z"/>
+      </svg>
+      <span class="inquiry-popup__divider-line"></span>
+    </div>
+    <a href="mailto:info@aquanagroup.shop" class="inquiry-popup__email">info@aquanagroup.shop</a>
+  </aside>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
